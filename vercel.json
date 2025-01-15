@@ -4,21 +4,5 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["fra1"],
-  "builds": [
-    {
-      "src": "next.config.js",
-      "use": "@vercel/next"
-    }
-  ],
-  "env": {
-    "NEXT_PUBLIC_BASE_URL": "@next_public_base_url",
-    "NODE_ENV": "production"
-  },
-  "github": {
-    "silent": true,
-    "autoAlias": true
-  },
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./",
   "outputDirectory": ".next"
 }
