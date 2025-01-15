@@ -1,0 +1,53 @@
+.hover {
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        transform: translateX(var(--static-space-8));
+    }
+}
+
+.postCard {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-4px);
+        background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+}
+
+.thumbnailContainer {
+    @media (max-width: 768px) {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+}
+
+.thumbnailImage {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.imageHover {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

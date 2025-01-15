@@ -1,0 +1,146 @@
+{
+    "person": {
+        "firstName": "Ahmed",
+        "lastName": "Zaghloul",
+        "name": "Ahmed Zaghloul",
+        "role": "Design Engineer",
+        "location": "MENA/Egypt"
+    },
+    "newsletter": {
+        "title": "Subscribe to Zaghloul's Newsletter",
+        "description": "If you don't want to miss out on my blog content, sign up to my newsletter. I occasionally write about business, technology, and share thoughts on the intersection between them.",
+        "button": "Sign up"
+    },
+    "social": {
+        "facebook": "https://www.facebook.com/zaghloul.me/",
+        "linkedin": "https://www.linkedin.com/in/zaghloul-me/",
+        "twitter": "https://x.com/ZaghloulMe/",
+        "email": "mailto:ahmed@zaghloul.me"
+    },
+    "home": {
+        "label": "Home",
+        "title": "Ahmed Zaghloul's Personal Website",
+        "description": "This is where Ahmed Zaghloul jots down his thoughts, provides helpful resources as a Design Engineer",
+        "headline": "Business Growth Strategist & CEO",
+        "subline": "I'm Zaghloul, I help businesses thrive by improving their plans and daily operations. Currently leading illustraV and Sylvur to create practical solutions that make a difference."
+    },
+    "about": {
+        "label": "About",
+        "title": "About me",
+        "description": "Meet Ahmed Zaghloul, Design Engineer from MENA/Egypt",
+        "intro": {
+            "title": "Hi, I'm Ahmed Zaghloul",
+            "description": "I help businesses thrive by improving their plans and daily operations."
+        },
+        "work": {
+            "title": "Work Experience",
+            "experiences": {
+                "FLY": {
+                    "timeframe": "2022 - Present",
+                    "role": "Design Engineer",
+                    "achievements": "Led design system development, improved user experience, and mentored junior designers"
+                },
+                "Creativ3": {
+                    "timeframe": "2020 - 2022",
+                    "role": "UX/UI Designer",
+                    "achievements": "Designed and implemented user interfaces for various web applications"
+                }
+            }
+        },
+        "studies": {
+            "title": "Education",
+            "institutions": {
+                "University of Jakarta": {
+                    "description": "Bachelor's degree in Computer Science"
+                },
+                "Build the Future": {
+                    "description": "Certificate in UI/UX Design"
+                }
+            }
+        },
+        "technical": {
+            "title": "Technical Skills",
+            "skills": {
+                "Figma": {
+                    "description": "Expert in creating design systems and prototypes"
+                },
+                "Nextjs": {
+                    "description": "Proficient in building modern web applications"
+                }
+            }
+        }
+    },
+    "blog": {
+        "label": "Blog",
+        "title": "Writing about design and tech...",
+        "description": "Read what Ahmed Zaghloul has been up to recently"
+    },
+    "work": {
+        "label": "Work",
+        "title": "My projects",
+        "description": "Design and dev projects by Ahmed Zaghloul"
+    },
+    "gallery": {
+        "label": "Gallery",
+        "title": "My photo gallery",
+        "description": "A photo collection by Ahmed Zaghloul",
+        "images": {
+            "img01": {
+                "alt": "Gallery image 1 - A vertical shot showcasing creative work"
+            },
+            "img02": {
+                "alt": "Gallery image 2 - A horizontal perspective of design elements"
+            },
+            "img03": {
+                "alt": "Gallery image 3 - A vertical composition highlighting details"
+            },
+            "img04": {
+                "alt": "Gallery image 4 - A horizontal view of project implementation"
+            },
+            "img05": {
+                "alt": "Gallery image 5 - A horizontal capture of design process"
+            },
+            "img06": {
+                "alt": "Gallery image 6 - A vertical study of form and function"
+            },
+            "img07": {
+                "alt": "Gallery image 7 - A horizontal layout of design concepts"
+            },
+            "img08": {
+                "alt": "Gallery image 8 - A vertical exploration of space"
+            },
+            "img09": {
+                "alt": "Gallery image 9 - A horizontal snapshot of workflow"
+            },
+            "img10": {
+                "alt": "Gallery image 10 - A horizontal view of creative process"
+            },
+            "img11": {
+                "alt": "Gallery image 11 - A vertical display of design thinking"
+            },
+            "img12": {
+                "alt": "Gallery image 12 - A horizontal perspective on collaboration"
+            },
+            "img13": {
+                "alt": "Gallery image 13 - A horizontal showcase of final results"
+            },
+            "img14": {
+                "alt": "Gallery image 14 - A horizontal capture of project completion"
+            }
+        }
+    },
+    "projectCard": {
+        "label": "Read Case Study"
+    },
+    "resources": {
+        "label": "Resources",
+        "title": "Design Resources",
+        "description": "A collection of helpful design resources and tools",
+        "items": {
+            "designSystem": {
+                "title": "Design System Kit",
+                "description": "A comprehensive design system for web applications"
+            }
+        }
+    }
+}
