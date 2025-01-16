@@ -151,13 +151,28 @@ export function getResource(slug: string, locale: string = 'en') {
     try {
         if (!existsSync(resourcePath)) {
             console.error('Resource file not found:', resourcePath);
-            return null;
+            // Try alternative path
+            const altResourcesDirectory = join(process.cwd(), 'src', 'app', locale, 'resources', 'content', locale);
+            const altResourcePath = join(altResourcesDirectory, `${slug}.mdx`);
+            
+            if (!existsSync(altResourcePath)) {
+                console.error('Resource file not found in alternative path:', altResourcePath);
+                return null;
+            }
+            
+            const fileContents = readFileSync(altResourcePath, 'utf8');
+            const source = matter(fileContents);
+            
+            return {
+                content: source.content,
+                metadata: source.data as ResourceMetadata,
+                slug,
+            };
         }
 
         const fileContents = readFileSync(resourcePath, 'utf8');
         const source = matter(fileContents);
         
-        // Return a plain object without methods
         return {
             content: source.content,
             metadata: source.data as ResourceMetadata,
