@@ -1,5 +1,5 @@
 import { Flex, Heading, Text, SmartImage } from '@/once-ui/components';
-import { getResource } from '@/app/utils/utils';
+import { getResource, getResources } from '@/app/utils/utils';
 import { getTranslations } from 'next-intl/server';
 import { renderContent } from '@/app/resources';
 import styles from '../Resources.module.css';
@@ -20,6 +20,13 @@ interface PageProps {
     locale: string;
     slug: string;
   };
+}
+
+export async function generateStaticParams() {
+  const resources = getResources('en');
+  return resources.map((resource) => ({
+    slug: resource.slug
+  }));
 }
 
 export default async function ResourcePage({ params: { locale, slug } }: PageProps) {
