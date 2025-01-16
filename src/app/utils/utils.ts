@@ -129,19 +129,33 @@ export function getPost(slug: string, locale: string = 'en') {
 }
 
 export function getResources(locale: string = 'en'): Resource[] {
-    const resourcesDirectory = join(process.cwd(), 'src', 'app', '[locale]', 'resources', 'content', locale);
-    const resources = getMDXData(resourcesDirectory);
-    return resources
-        .map(resource => ({
-            ...resource,
-            slug: resource.slug,
-            metadata: resource.metadata as ResourceMetadata
-        }))
-        .sort((a, b) => {
-            if (a.metadata.publishedAt < b.metadata.publishedAt) return 1;
-            if (a.metadata.publishedAt > b.metadata.publishedAt) return -1;
-            return 0;
-        });
+    const resourcesDirectories = [
+        join(process.cwd(), 'src', 'app', '[locale]', 'resources', 'content', locale),
+        join(process.cwd(), 'src', 'app', locale, 'resources', 'content', locale)
+    ];
+
+    let resources: Resource[] = [];
+
+    for (const resourcesDirectory of resourcesDirectories) {
+        try {
+            const directoryResources = getMDXData(resourcesDirectory);
+            resources = resources.concat(
+                directoryResources.map(resource => ({
+                    ...resource,
+                    slug: resource.slug,
+                    metadata: resource.metadata as ResourceMetadata
+                }))
+            );
+        } catch (error) {
+            console.warn(`Could not read resources from ${resourcesDirectory}:`, error);
+        }
+    }
+
+    return resources.sort((a, b) => {
+        if (a.metadata.publishedAt < b.metadata.publishedAt) return 1;
+        if (a.metadata.publishedAt > b.metadata.publishedAt) return -1;
+        return 0;
+    });
 }
 
 export function getResource(slug: string, locale: string = 'en') {
